@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+:root{
+    --primary-color: #a4916d;
+    --black: #000;
+    --white:#fff;
+    --bg: #f9f9f9;
+    --border: 0.1rem solid #9b9797;
+    --box-shadow: 0 0.5rem 1rem grey;
+    --light-black: #666;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+.blogs{
+    padding: 9rem 9%;
+    background: var(--bg);
+}
+
+ .box{
+    padding: 8rem 3%;
+    /* border: 2px double #5d5b5b; */
+}
+
+.blogs .heading{
+    text-align: center;
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.blogs .heading span{
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+ 
+}
+
+.blogs .box-container .box{
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    
+}
+
+.blogs .box-container .box .image{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blogs .box-container .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogs .box-container .box .image img:hover{
+    transform: scale(1.1);
+}
+
+.blogs .box-container .box .image .content{
+    padding: 2rem 1.5rem;
+}
+
+.blogs .box-container .box  .content h3{
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.blogs .box-container .box  .content p{
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--light-black);
+    padding: 1rem 0;
+}
+
+.blogs .box-container .box  .content #btn{
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    padding: .9rem 3rem;
+    border: .1rem solid var(--primary-color);
+    border-radius: 10rem;
+}
+
+.blogs .box-container .box  .content #btn:hover{
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.blogs .box-container .box  .content .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.blogs .box-container .box  .content .icons a,
+.blogs .box-container .box  .content .icon a{
+    font-size: 1.4rem;
+    color: var(--light-black)
+}
+
+.blogs .box-container .box  .content .icons a i,
+.blogs .box-container .box  .content .icon  a i{
+    color: var(--primary-color);
+    padding-right: .5rem;
+}
+
+.blogs .box-container .box  .content .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: var(--border);
+} 
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .blogs{
+        padding: 7rem 7%;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
